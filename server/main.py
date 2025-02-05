@@ -6,7 +6,11 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://chatbox-one-alpha.vercel.app/","http://localhost:3000"],
+    allow_origins=[
+        "https://chatbox-one-alpha.vercel.app",
+        "http://localhost:3000",
+        "https://chatbox-rb3b.onrender.com"  # Added the render.com domain
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
